@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>My Library</h1>
+  <table class="library">
+    <tr>
+      <th>Name</th>
+      <th>Author</th>
+      <th>Pages</th>
+      <th>Read</th>
+      <th></th>
+    </tr>
+  </table>
+  <dialog>
+    <form action="" method="dialog">
+      <fieldset>
+        <legend>Add Book Details</legend>
+
+        <div>
+          <label for="book-name">Name</label>
+          <input type="text" id="book-name" name="book-name">
+        </div>
+
+        <div>
+          <label for="book-author">Author</label>
+          <input type="text" id="book-author" name="book-author">
+        </div>
+
+        <div>
+          <label for="book-pages">Pages</label>
+          <input type="text" id="book-pages" name="book-pages">
+        </div>
+
+        <div>
+          <label for="readStatus">Have you read this book?</label>
+          <select name="readStatus" id="readStatus">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+      </fieldset>
+      <button type="submit">Submit</button>
+      <button type="button" id="close-modal-button">close</button>
+    </form>
+  </dialog>
+  <button id="show-modal-button">Add new book</button>
+</body>
+</html>
