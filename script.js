@@ -13,11 +13,18 @@ const myLibrary = [
   }
 ];
 
-function Book(name, author, pages, isRead) {
-  this.name = name;
-  this.author = author;
-  this.pages = pages;
-  this.isRead = isRead;
+class Book {
+  name;
+  author;
+  pages;
+  isRead;
+
+  constructor(name, author, pages, isRead) {
+    this.name = name;
+    this.author = author;
+    this.pages = pages;
+    this.isRead = isRead;
+  }
 }
 
 // Get the form element
@@ -34,7 +41,7 @@ form.addEventListener('submit', function(event) {
 
 function addBookToLibrary(formData) {
   let args = [];
-  for (let [key, value] of formData.entries()) {
+  for (let value of formData.values()) {
     args.push(value);
   }
 
